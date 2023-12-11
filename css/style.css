@@ -32,7 +32,7 @@ header {
     gap: 40px;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 944px) {
     .reg_buttons nav ul {
         gap: 15px;
     }
@@ -46,7 +46,7 @@ header {
     border-radius: 8px;
     background: var(--Black, #000);
     box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
-
+    margin-top: 15px;
     display: flex;
     padding: 12px 24px;
     justify-content: center;
@@ -92,8 +92,8 @@ main {
 }
 
 .main_info {
-    padding-top: 47px;
-    width: 50%;
+    /* padding-top: 47px; */
+    width: 55%;
 }
 
 .main_info h1 {
@@ -140,6 +140,14 @@ main {
     color: #666666;
 }
 
+.main_info_buttons {
+    padding-top: 15px;
+}
+
+.main_info_buttons p {
+    font-size: 20px;
+}
+
 @media only screen and (max-width: 1299px) {
     .main {
         min-height: 500px;
@@ -152,7 +160,7 @@ main {
     }
 
     .main_info {
-        width: 400px;
+        width: 385px;
     }
 
     .main_info p {
@@ -164,6 +172,27 @@ main {
 }
 
 @media only screen and (max-width: 944px) {
+    main {
+        padding-top: 10px;
+        min-height: 337px;
+        height: auto;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+
+    .headerLink {
+        padding: 8px 18px;
+        font-size: 10px;
+    }
+
+    .reg_buttons nav ul {
+        gap: 32px;
+    }
+
     .main {
         height: auto;
         padding-bottom: 100px;
@@ -176,43 +205,58 @@ main {
     }
 
     .main_info h1 {
-        font-size: 40px;
-        line-height: 50px;
-        letter-spacing: 1px;
+        font-size: 34px;
+
     }
 
     .main_info {
-        width: 550px;
+        width: 65%;
+        display: flex;
+        padding-top: 50px;
     }
 
-    .main_info p {
-        margin-top: 16px;
-        width: 350px;
-        font-size: 16px;
+    .main_info_buttons {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+
+    }
+
+    .main_info_buttons p {
+        margin-top: 37px;
+        width: 130px;
+        font-size: 26px;
         line-height: 20px;
+    }
+
+    .main_block {
+        width: 100%;
+        display: flex;
+    }
+
+
+
+
+    footer {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .footer_contacts {
+        display: flex;
+        margin-top: 20px;
+    }
+
+
+
+    .footer_info_block {
+        display: block;
     }
 }
 
-@media only screen and (max-width: 640px) {
-    .main_info h1 {
-        font-size: 32px;
-        line-height: 35px;
-        letter-spacing: 1px;
-    }
 
-    .main_info {
-        width: 100%;
-    }
-
-    .main_info p {
-        margin-top: 14px;
-        width: 100%;
-        font-size: 14px;
-        line-height: 20px;
-    }
-}
-
-/**/
 
 
 .main_todoBlock .todoBlock {
@@ -534,14 +578,54 @@ footer {
 }
 
 @media only screen and (max-width: 640px) {
-    footer {
+    /* footer {
         height: auto;
-        padding: 60px 0;
+        padding: 10px 0;
+    } */
+
+    #contacts {
+        font-size: 15px;
     }
 
-    .footer_inner {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
+    .logoFooter {
+        font-size: 30px;
+        justify-content: center;
+    }
+
+    .footer_info_block {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_contacts ul {
+        flex-direction: row;
+    }
+
+    .footer_contacts ul li a {
+        font-size: 12px;
+    }
+
+    .loginForm,
+    .regForm {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .star_img {
+        position: absolute;
+        top: 10%;
+        left: 86%;
+        z-index: 10;
+        width: 50px;
+        /* height: 75px; */
+    }
+
+    .reg_buttons {
+
+        align-items: center;
+    }
+
+    .logoutBtn {
+        margin: 0;
     }
 }
