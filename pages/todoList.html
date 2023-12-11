@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/todoListPage.css">
+    <!-- <link rel="stylesheet" href="../css/footer.css"> -->
+    <!-- <link rel="stylesheet" href="../css/header.css"> -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="reg_buttons">
+                    <a class="logo" href="../index.html">TodoList<span>App</span></a>
+                    <nav>
+                        <ul>
+                            <li><span class="usernameOutput"></span></li>
+
+                            <li><a class="headerLink logoutBtn" href="../index.html">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="container">
+                <img src="../images/Star.svg" alt="" class="star_img">
+                <div class="todoListBlock">
+                    <form class="topBlockForm">
+                        <h2>Write here your tasks</h2>
+                        <div class="topBlockInputs">
+                            <label>
+                                <span>Title:</span>
+                                <input required class="titleInp" type="text">
+                            </label>
+                            <label>
+                                <span>Description:</span>
+                                <input required class="descriptionInp" type="text">
+                            </label>
+                            <button type="submit" class="todoPostBtn">ADD</button>
+                        </div>
+                        <div class="filterButtons">
+                            <button type="button" class="all filterButton active">all</button>
+                            <button type="button" class="completed-btn filterButton">completed</button>
+                            <button type="button" class="uncompleted filterButton">uncompleted</button>
+                        </div>
+                    </form>
+                    <div class="taskListBlock">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <div class="footer_info_block">
+                    <a class="logoFooter" href="index.html">TodoListApp<a>
+                            <div class="footer_contacts">
+                                <h2 id="contacts">Our contacts</h2>
+                                <ul>
+                                    <li>
+                                        <a class="social_media" href="https://t.me/Nazik_Isaeva">
+                                            <img src="../images/telegramlogo.png" alt="">
+                                            Our Telegram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="social_media" href="https://instagram.com/">
+                                            <img src="../images/insta.png" alt="">
+                                            Our Instagram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="social_media" href="https://github.com/isaevanazik6">
+                                            <img src="../images/github.png" alt="">
+                                            Our Github
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <div class="editModalWindow hideBlock">
+        <form class="editModalWindowForm">
+            <h3>Edit your title</h3>
+            <div class="editModalWindowInputs">
+                <label>
+                    <span>New title:</span>
+                    <input required="required" placeholder="..." class="editModalTitleInput" type="text">
+                </label>
+                <label>
+                    <span>New description:</span>
+                    <input required="required" placeholder="..." class="editModalDescInput" type="text">
+                </label>
+                <button type="submit" class="editModalConfirmBtn">CONFIRM</button>
+            </div>
+            <button type="button" class="editModalCloseBtn">&times;</button>
+        </form>
+    </div>
+
+</body>
+
+
+<script src="../js/todoList.js"></script>
+
+</html>

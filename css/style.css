@@ -1,0 +1,547 @@
+/*Main =======================*/
+
+body {
+    background: var(--Champagne, #F7EDE8);
+}
+
+header {
+    /* height: 10px; */
+    padding: 15px 0 0;
+}
+
+.reg_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    line-height: normal;
+    font-size: 28px;
+    color: black;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #CD4631
+}
+
+.reg_buttons nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+@media only screen and (max-width: 640px) {
+    .reg_buttons nav ul {
+        gap: 15px;
+    }
+}
+
+
+.headerLink,
+.getStartedBtn {
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    background: var(--Black, #000);
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.headerLink a {
+    color: white;
+    font-family: "Montserrat Alternates";
+
+}
+
+.headerLink:hover {
+    text-decoration: underline;
+}
+
+.headerLine {
+    height: 25px;
+    width: 1px;
+    border: 1px solid #a9a9a9;
+}
+
+.usernameOutput {
+    font-weight: 700;
+    font-size: 20px;
+    color: #FF8A56;
+}
+
+.navActive {
+    font-weight: 700;
+}
+
+main {
+    height: 100vh;
+    min-height: 670px;
+    padding-top: 70px;
+}
+
+.main_block {
+    width: 100%;
+}
+
+.main_info {
+    padding-top: 47px;
+    width: 50%;
+}
+
+.main_info h1 {
+    color: #000;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 82.5px;
+    letter-spacing: 2px;
+}
+
+.main_info h1::first-line {
+    color: #CD4631
+}
+
+.main_info p {
+    margin-top: 27px;
+    width: 547px;
+    color: #666;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+}
+
+.main_info button {
+    margin-top: 38px;
+    padding: 20px 30px;
+    background-color: black;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main_info button:hover {
+    background-color: #212121;
+}
+
+.main_info button:active {
+    background-color: #000000;
+    color: #666666;
+}
+
+@media only screen and (max-width: 1299px) {
+    .main {
+        min-height: 500px;
+    }
+
+    .main_info h1 {
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 1px;
+    }
+
+    .main_info {
+        width: 400px;
+    }
+
+    .main_info p {
+        margin-top: 16px;
+        width: 350px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 944px) {
+    .main {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    .main_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .main_info h1 {
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 1px;
+    }
+
+    .main_info {
+        width: 550px;
+    }
+
+    .main_info p {
+        margin-top: 16px;
+        width: 350px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .main_info h1 {
+        font-size: 32px;
+        line-height: 35px;
+        letter-spacing: 1px;
+    }
+
+    .main_info {
+        width: 100%;
+    }
+
+    .main_info p {
+        margin-top: 14px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/**/
+
+
+.main_todoBlock .todoBlock {
+    width: 450px;
+    height: 550px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main_todoBlock .todoBlock .topBlock {
+    height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_todoBlock .todoBlock .topBlock div {
+    border-radius: 3px;
+    background-color: #4d4d4d;
+    height: 25px;
+    width: 150px;
+}
+
+.main_todoBlock .todoBlock .taskListBlock {
+    height: 450px;
+    overflow: hidden;
+}
+
+.regForm {
+    border-radius: 7px;
+    padding: 60px 40px;
+    margin: 0 auto;
+    width: 600px;
+    background-color: #1c1c1c;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.regForm label input {
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-color: #dad9d5;
+    color: black;
+}
+
+.loginForm label p {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: wheat;
+}
+
+
+
+.regForm label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.regForm label p {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: wheat;
+}
+
+.regSubmitBtn {
+    background-color: wheat;
+    color: #000000;
+    margin-top: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 13px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Montserrat Alternates";
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.regSubmitBtn:hover {
+    filter: brightness(1.2);
+}
+
+.regSubmitBtn:active {
+    filter: brightness(0.8);
+}
+
+.star_img {
+    position: absolute;
+    top: 13%;
+    left: 87%;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+}
+
+.loginForm,
+.regForm {
+    border-radius: 7px;
+    padding: 60px 40px;
+    margin: 15px auto;
+    width: 600px;
+    background-color: #CD4631;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.loginForm h2 {
+    text-align: center;
+    color: wheat;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.loginForm h2 span {
+    color: #FF8A56;
+}
+
+.loginForm label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.loginForm label input {
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-color: #dad9d5;
+    color: black;
+}
+
+.loginForm label p {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: wheat;
+}
+
+.loginForm label p span {
+    color: #ff0000;
+}
+
+.loginBtn {
+    background-color: wheat;
+    color: #000000;
+    margin-top: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 13px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Montserrat Alternates";
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    filter: brightness(1.2);
+}
+
+.loginBtn:active {
+    filter: brightness(0.8);
+}
+
+.loginForm .errorMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.regForm h2 {
+    text-align: center;
+    color: wheat;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* @keyframes animateTodo {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -300px;
+    }
+
+    100% {
+        top: -600px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1299px) {
+    .main_todoBlock .todoBlock {
+        width: 450px;
+        height: 450px;
+    }
+
+    .main_todoBlock .todoBlock .topBlock {
+        height: 80px;
+    }
+
+    .main_todoBlock .todoBlock .taskListBlock {
+        height: 370px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 944px) {
+    .main_todoBlock .todoBlock {
+        width: 100%;
+        height: 350px;
+    }
+
+    .main_todoBlock .todoBlock .topBlock {
+        height: 80px;
+    }
+
+    .main_todoBlock .todoBlock .topBlock div {
+        height: 25px;
+        width: 250px;
+    }
+
+    .main_todoBlock .todoBlock .taskListBlock {
+        height: 270px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .main_todoBlock .todoBlock .topBlock div {
+        width: 120px;
+    }
+} */
+
+
+
+
+/*Footer =====================*/
+
+footer {
+    padding-top: 40px;
+    background-color: #707070;
+    height: 350px;
+}
+
+#contacts {
+    color: white;
+}
+
+.footer_info_block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 20%;
+}
+
+.logoFooter {
+
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.logoFooter span {
+    color: #FF8A56;
+}
+
+.footer_contacts h5 {
+    margin-bottom: 24px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.footer_contacts ul {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.footer_contacts ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bbb;
+    font-size: 16px;
+}
+
+.hideBlock {
+    display: none;
+}
+
+
+
+.social_media img {
+    width: 24px;
+    height: 24px;
+}
+
+@media only screen and (max-width: 640px) {
+    footer {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .footer_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}

@@ -1,0 +1,499 @@
+.main {
+    height: 100vh;
+    min-height: 670px;
+
+}
+
+
+
+
+
+.todoListBlock {
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    margin-top: 75px;
+    /*height: 500px;*/
+    /*border: 2px solid grey;*/
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.topBlockForm {
+    background-color: #707070;
+    /*height: 190px;*/
+    padding: 25px 25px 10px;
+}
+
+@media only screen and (max-width: 944px) {
+    .topBlockForm {
+        padding: 30px 30px 15px;
+    }
+}
+
+.topBlockForm h2 {
+    color: white;
+}
+
+.topBlockForm h2 span {
+    color: #FFF;
+}
+
+.topBlockInputs {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 944px) {
+    .topBlockInputs {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+.topBlockInputs label {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 944px) {
+    .topBlockInputs label {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 5px;
+    }
+}
+
+.topBlockInputs label input {
+    width: 400px;
+    height: 30px;
+    margin-left: 10px;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+
+@media only screen and (max-width: 1299px) {
+    .topBlockInputs label input {
+        width: 250px;
+    }
+}
+
+
+@media only screen and (max-width: 944px) {
+    .topBlockInputs label input {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.topBlockInputs label span {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+@media only screen and (max-width: 944px) {
+    .topBlockInputs label span {
+        font-size: 16px;
+    }
+}
+
+.todoPostBtn {
+    width: 70px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    /* font-family: "Roboto", sans-serif; */
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #FFF;
+}
+
+@media only screen and (max-width: 944px) {
+    .todoPostBtn {
+        width: 100%;
+    }
+}
+
+.todoPostBtn:hover {
+    filter: brightness(1.2);
+}
+
+.todoPostBtn:active {
+    filter: brightness(0.8);
+}
+
+.filterButtons {
+    margin-top: 35px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    gap: 30px;
+}
+
+@media only screen and (max-width: 944px) {
+    .filterButtons {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .filterButtons {
+        gap: 10px;
+    }
+}
+
+
+.filterButtons button {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #2f2f2f;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 640px) {
+    .filterButtons button {
+        padding: 0 5px;
+        font-size: 14px;
+    }
+}
+
+.filterButtons button:hover {
+    filter: brightness(1.3);
+}
+
+.filterButtons button:active {
+    filter: brightness(0.8);
+}
+
+.filterButtons .active {
+    background-color: #FFF;
+    color: #000;
+}
+
+.taskListBlock {
+    height: 410px;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 944px) {
+    .taskListBlock {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .taskListBlock {
+        height: 500px;
+    }
+}
+
+.taskBlock {
+    padding: 20px 20px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: #dadada;*/
+    border-bottom: 1px solid #e8e8e8;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+    .taskBlock {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+
+
+.taskBlockLine {
+    height: 40px;
+    width: 1px;
+    border: 1px solid #e5e5e5;
+}
+
+@media only screen and (max-width: 640px) {
+    .taskBlockLine {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+.taskTitleDescCheckbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+/*@media only screen and (max-width: 640px) {*/
+/*    .taskTitleDescCheckbox {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
+
+.taskCheckbox[type="checkbox"] {
+    margin-top: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+
+    color: #0c0c0c;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0c0c0c;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.taskCheckbox[type="checkbox"]::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    transform: scale(0);
+    transition: 100ms transform ease-in-out;
+    box-shadow: inset 20px 20px #31e100;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.taskCheckbox[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.taskTitleDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 850px;
+}
+
+@media only screen and (max-width: 1299px) {
+    .taskTitleDesc {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 944px) {
+    .taskTitleDesc {
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .taskTitleDesc {
+        width: 100%;
+    }
+}
+
+.taskTitle {
+    font-size: 20px;
+    color: #CD4631;
+    ;
+    word-break: break-word;
+}
+
+.taskDesc {
+    font-size: 16px;
+    color: #3d3d3d;
+    word-break: break-word;
+}
+
+.taskButtons {
+    display: flex;
+    gap: 15px;
+    height: 40px;
+}
+
+.taskButtons button {
+    width: 70px;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+
+.taskEdit {
+    background-color: black;
+    color: white;
+}
+
+.taskDelete {
+    background-color: #ff5d5d;
+    color: white;
+}
+
+.taskEdit:hover {
+    background-color: #3b3b3b;
+    color: white;
+}
+
+.taskEdit:active {
+    background-color: black;
+    color: #c7c7c7;
+}
+
+.taskDelete {
+    background-color: #ff4747;
+    color: white;
+}
+
+.taskDelete:hover {
+    background-color: #fc6c6c;
+    color: white;
+}
+
+.taskDelete:active {
+    background-color: #d93c3c;
+    color: #c7c7c7;
+}
+
+/*Modal window=========================*/
+
+.editModalWindow {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editModalWindowForm {
+    position: relative;
+    width: 600px;
+    background-color: #707070;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+
+
+.editModalWindowForm h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.editModalWindowForm h3 span {
+    color: #FFF;
+}
+
+.editModalWindowInputs {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.editModalWindowInputs label {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.editModalWindowInputs label input {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.editModalWindowInputs label span {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.editModalConfirmBtn {
+    margin: 24px auto 0;
+    display: block;
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #FFF;
+}
+
+
+
+.editModalConfirmBtn:hover {
+    filter: brightness(1.2);
+}
+
+.editModalConfirmBtn:active {
+    filter: brightness(0.8);
+}
+
+.editModalCloseBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: #b7b7b7;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 15px;
+}
+
+.editModalCloseBtn:hover {
+    color: #ffffff;
+}
+
+.editModalCloseBtn:active {
+    color: #797979;
+}
+
+.hideBlock {
+    display: none;
+}
+
+.noTasksMessage {
+    color: #bbbbbb;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
