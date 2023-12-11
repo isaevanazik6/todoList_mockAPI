@@ -8,7 +8,7 @@ const userId = JSON.parse(localStorage.getItem("user"))?.id
 // Redirect to todolist page if logged in
 window.onload = () => {
     if (userId) {
-        window.location.replace("../pages/todoListPage.html")
+        window.location.replace("../pages/todoList.html")
     }
 }
 
@@ -43,7 +43,7 @@ loginForm.onsubmit = async (e) => {
     const user = await fetchAllUsers()
     if (user) {
         localStorage.setItem("user", JSON.stringify(user))
-        window.location.replace("../pages/todoListPage.html")
+        window.location.replace("../pages/todoList.html")
     } else {
         errorMessage.innerHTML = "Invalid login or password"
     }

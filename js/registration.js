@@ -10,7 +10,7 @@ const userId = JSON.parse(localStorage.getItem("user"))?.id
 
 window.onload = () => {
     if (userId) {
-        window.location.replace("../pages/todoListPage.html")
+        window.location.replace("../pages/todoList.html")
     }
 }
 
@@ -34,7 +34,7 @@ const registerUser = (email, username, password) => {
             if (xhr.status >= 200 && xhr.status < 300) {
                 const userData = JSON.parse(xhr.responseText);
                 localStorage.setItem("user", JSON.stringify(userData));
-                window.location.replace("../pages/todoListPage.html");
+                window.location.replace("../pages/todoList.html");
             } else {
                 console.log("Error:", xhr.statusText);
             }

@@ -23,7 +23,7 @@ const userId = JSON.parse(localStorage.getItem("user"))?.id
 
 window.onload = () => {
     const user = JSON.parse(localStorage.getItem("user")) ?? {};
-    if (!user.id) setTimeout(() => window.location.replace("../pages/loginPage.html"), 1);
+    if (!user.id) setTimeout(() => window.location.replace("../pages/login.html"), 1);
     else headerUsername.innerHTML = user.username;
 };
 
